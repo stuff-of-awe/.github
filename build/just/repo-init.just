@@ -161,13 +161,18 @@ repo-init archetype="":
     # <Name> is the package's own identifier (UpperCamelCase by Julia
     # convention). The julia-library archetype accepts that form as well as
     # the estate slug; every other mint takes the estate slug only.
-    if [[ "$ARCHETYPE" = "julia-library" && "$REPO" =~ ^[A-Z][A-Za-z0-9]*\.jl$ ]]; then
+    if [[ "$REPO" = ".github" ]]; then
+        : # GitHub reserves this exact name for organisation profiles.
+    elif [[ "$ARCHETYPE" = "julia-library" && "$REPO" =~ ^[A-Z][A-Za-z0-9]*\.jl$ ]]; then
         :
     elif [[ ! "$REPO" =~ ^[a-z0-9]+(-[a-z0-9]+)*$ ]]; then
         echo "Error: repo slug must be lowercase alphanumeric words separated by single hyphens"
         [ "$ARCHETYPE" = "julia-library" ] && echo "       (or, for a Julia package, <Name>.jl with <Name> in UpperCamelCase)"
         exit 1
     fi
+
+    # Keep the deed discoverable by the estate's non-hidden root glob.
+    DEED_STEM="${REPO#.}"
 
     ask "Owner [${OWNER:-}]: " _OWNER
     OWNER="${_OWNER:-${OWNER:-}}"
@@ -668,9 +673,9 @@ repo-init archetype="":
         # brace-collapse hazard class repo-init has already been burnt by.
         # The deed was found by shape above (DEED_IN), never by the original
         # template's name, so a mint from a minted repo renames it too.
-        if [ "${DEED_IN#./}" != "${REPO}_chora.deed" ]; then
-            mv -- "$DEED_IN" "${REPO}_chora.deed"
-            echo "  repo deed: renamed ${DEED_IN#./} -> ${REPO}_chora.deed"
+        if [ "${DEED_IN#./}" != "${DEED_STEM}_chora.deed" ]; then
+            mv -- "$DEED_IN" "${DEED_STEM}_chora.deed"
+            echo "  repo deed: renamed ${DEED_IN#./} -> ${DEED_STEM}_chora.deed"
         fi
     fi
 
@@ -778,7 +783,7 @@ repo-init archetype="":
     #
     # The pin lives only in the deed (#215 moved it there from the retired
     # profile file, whose copy could not follow canon 2.1.2).
-    # The deed was renamed to ${REPO}_chora.deed by the self-name pass above,
+    # The deed was renamed to ${DEED_STEM}_chora.deed by the self-name pass above,
     # and its (canon …) clause is carried into the child unchanged, so the
     # child's deed and its PROVENANCE agree at mint.
     #
@@ -808,7 +813,7 @@ repo-init archetype="":
         echo "$_clauses" | grep -oE ':'"$1"'[[:space:]]+"[^"]*"' | head -1 | sed -E 's/^[^"]*"//; s/"$//' || true
     }
 
-    DEED_OUT="${REPO}_chora.deed"
+    DEED_OUT="${DEED_STEM}_chora.deed"
     CANON_VERSION=""
     CANON_CRITERIA_SHA=""
     CANON_GATES_SHA=""
@@ -909,11 +914,11 @@ repo-init archetype="":
         echo "    (paths"
         echo "      :added ()"
         _removed=("${MINT_REMOVES[@]}")
-        [ "${DEED_IN#./}" = "${REPO}_chora.deed" ] || _removed+=("${DEED_IN#./}")
+        [ "${DEED_IN#./}" = "${DEED_STEM}_chora.deed" ] || _removed+=("${DEED_IN#./}")
         printf '      :removed ('; _sep=""
         for _p in "${_removed[@]}"; do printf '%s"%s"' "$_sep" "$_p"; _sep=" "; done
         printf ')\n'
-        echo "      :diverged (\"${REPO}_chora.deed\" \"docs/status/ROADMAP.adoc\")))"
+        echo "      :diverged (\"${DEED_STEM}_chora.deed\" \"docs/status/ROADMAP.adoc\")))"
     } | put_clause variant
     if [ "$PARENT_PIN" = "UNASSIGNED" ]; then
         echo "  provenance: $DEED_OUT (variant) — parent-pin UNASSIGNED (offline?)"

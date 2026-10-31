@@ -14,9 +14,10 @@ validate-rsr:
     cd "{{justfile_directory()}}"
     echo "=== RSR Compliance Check ==="
     MISSING=""
-    for f in .editorconfig .gitignore Justfile README.adoc LICENSE; do
+    for f in .editorconfig .gitignore Justfile README.adoc; do
         [ -f "$f" ] || MISSING="$MISSING $f"
     done
+    [ -f LICENSE ] || [ -f LICENSE.adoc ] || MISSING="$MISSING LICENSE-or-LICENSE.adoc"
     # The repo deed's filename carries the repo slug (<stem>_chora.deed), so
     # this is a glob.
     ls *_chora.deed >/dev/null 2>&1 || MISSING="$MISSING repo-deed (*_chora.deed)"

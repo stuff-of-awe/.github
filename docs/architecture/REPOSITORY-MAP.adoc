@@ -97,6 +97,10 @@ predecessors did.
 | optional
 | estate docs gate (standards scripts/check-docs-presence.sh) requires CONTRIBUTING at the ROOT; this is the copy it verifies
 
+| `CONTRIBUTING.md`
+| optional
+| accepted at root OR .github/; .github/ is the canonical estate location
+
 | `Justfile`
 | yes
 | thin; delegates phases to build/just/*.just
@@ -117,9 +121,9 @@ predecessors did.
 | optional
 | community health file; GitHub accepts it at root, docs/ or .github/
 
-| `archetypes/`
-| optional
-| template-only variation seam (ADR-0003); `just repo-init` removes it from minted repos
+| `SUPPORT.md`
+| yes
+| -
 
 | `benches/`
 | optional
@@ -149,6 +153,10 @@ predecessors did.
 | optional
 | optional feature packs
 
+| `github_chora.deed`
+| yes
+| -
+
 | `launcher.sh`
 | yes
 | --setup/--doctor/--heal/--ai-setup (launcher-standard 0.6.0); the one file a newcomer runs first
@@ -161,9 +169,9 @@ predecessors did.
 | yes
 | the toolchain: every tool at latest (PROVISIONING-STANDARD §4)
 
-| `rsr-template-repo_chora.deed`
+| `profile/`
 | yes
-| the repo deed: universal AI entry point; family-7 allocation manifest + ply tree folded in (standards#837 pilot). Filename carries the repo slug (deed dispatch <stem>_chora.deed), so repo-init renames it at mint
+| -
 
 | `scripts/`
 | yes

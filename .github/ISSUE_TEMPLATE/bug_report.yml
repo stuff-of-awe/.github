@@ -1,58 +1,18 @@
-# SPDX-License-Identifier: CC-BY-SA-4.0
-# SPDX-FileCopyrightText: 2026 Jonathan D.A. Jewell <j.d.a.jewell@open.ac.uk>
-name: Bug report
-description: Something behaves differently from what it claims to do.
-labels: ["bug", "needs-triage"]
+name: Correction
+description: Report an inaccurate description, broken link or profile problem
+title: ""
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Please report what you **observed**, not what you inferred. A command and
-        its actual output is worth more than a description of the problem.
   - type: textarea
-    id: what-happened
+    id: location
     attributes:
-      label: What happened
-      description: The observed behaviour, with the exact command and its output.
-      placeholder: |
-        $ just verify
-        error: ...
-      render: shell
+      label: Where is the problem?
+      description: Link to the affected page or list entry.
     validations:
       required: true
   - type: textarea
-    id: expected
+    id: correction
     attributes:
-      label: What you expected instead
+      label: What needs correcting?
+      description: Explain what is wrong and provide a reliable source or suggested fix.
     validations:
       required: true
-  - type: textarea
-    id: repro
-    attributes:
-      label: Minimal reproduction
-      description: The shortest sequence that reproduces it from a clean checkout.
-    validations:
-      required: true
-  - type: input
-    id: version
-    attributes:
-      label: Version / commit
-      description: Output of `git rev-parse --short HEAD`.
-    validations:
-      required: true
-  - type: textarea
-    id: environment
-    attributes:
-      label: Environment
-      description: OS, and the output of `just --version` and `mise current` if relevant.
-    validations:
-      required: false
-  - type: checkboxes
-    id: checks
-    attributes:
-      label: Before submitting
-      options:
-        - label: I have reported observed output rather than a summary of it.
-          required: true
-        - label: This is not a security vulnerability (those go via a private advisory).
-          required: true
