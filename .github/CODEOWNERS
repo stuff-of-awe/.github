@@ -2,14 +2,14 @@
 # CODEOWNERS - Define code review assignments
 # See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 #
-# Replace {{OWNER}} with your GitHub username or team
+# Replace stuff-of-awe with your GitHub username or team
 
 # Default owners for everything
-* @{{OWNER}}
+* @stuff-of-awe
 
 # Security-sensitive files require explicit review
-SECURITY.md @{{OWNER}}
-.github/workflows/ @{{OWNER}}
-.machine_readable/contractiles/trust/ @{{OWNER}}
-*_chora.deed @{{OWNER}}
-.machine_readable/ @{{OWNER}}
+SECURITY.md @stuff-of-awe
+.github/workflows/ @stuff-of-awe
+.machine_readable/contractiles/trust/ @stuff-of-awe
+*_chora.deed @stuff-of-awe
+.machine_readable/ @stuff-of-awe

@@ -1,0 +1,10 @@
+// SPDX-License-Identifier: CC-BY-SA-4.0
+= GitHub organisation-profile specialisation
+
+The reserved repository is stuff-of-awe/.github. Its public entry point is profile/README.md. Community defaults apply only where an individual repository does not provide its own supported file.
+
+The RSR template is pinned in github_chora.deed. This repository declares no application capabilities; inherited governance tools remain for auditability. It does not claim to be an upstream template, a package, an ABI provider, or a deployed website.
+
+The .github slug is accepted explicitly by repo-init. Its deed uses github_chora.deed to remain discoverable by non-hidden root globs. The validator recognises the template's existing LICENSE.adoc as well as LICENSE without changing either licence text.
+
+Brand files are hero.png, social.png and avatar.png under profile/assets/. Catachresis Colloquium also uses hero.gif: it plays once and holds its final frame, with a still-image source for reduced-motion preferences.

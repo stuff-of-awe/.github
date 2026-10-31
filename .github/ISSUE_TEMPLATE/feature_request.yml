@@ -1,37 +1,16 @@
-# SPDX-License-Identifier: CC-BY-SA-4.0
-# SPDX-FileCopyrightText: 2026 Jonathan D.A. Jewell <j.d.a.jewell@open.ac.uk>
-name: Feature request
-description: Propose a capability this project does not yet have.
-labels: ["enhancement", "needs-triage"]
+name: Suggestion
+description: Suggest a resource, collection or improvement
 body:
   - type: textarea
-    id: problem
+    id: suggestion
     attributes:
-      label: The problem
-      description: What are you unable to do today? Describe the situation, not the solution.
+      label: What would you like to add or improve?
     validations:
       required: true
   - type: textarea
-    id: proposal
+    id: relevance
     attributes:
-      label: Proposed change
-    validations:
-      required: true
-  - type: textarea
-    id: alternatives
-    attributes:
-      label: Alternatives considered
-      description: Including doing nothing — say why that is insufficient.
-    validations:
-      required: false
-  - type: dropdown
-    id: scope
-    attributes:
-      label: Scope
-      description: Would this change the template's shape, and therefore every repo minted from it?
-      options:
-        - Repo-local — affects only this project
-        - Template-wide — would propagate to minted repos
-        - Not sure
+      label: Why is it useful?
+      description: Include sources, relevant links and any connection you have to the proposed project.
     validations:
       required: true
