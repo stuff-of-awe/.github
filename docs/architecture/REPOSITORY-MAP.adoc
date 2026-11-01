@@ -123,7 +123,7 @@ predecessors did.
 
 | `SUPPORT.md`
 | yes
-| -
+| Markdown community support fallback read by GitHub
 
 | `benches/`
 | optional
@@ -155,7 +155,7 @@ predecessors did.
 
 | `github_chora.deed`
 | yes
-| -
+| the repo deed: universal AI entry point; family-7 allocation manifest + ply tree folded in (standards#837 pilot). Filename carries the repo slug (deed dispatch <stem>_chora.deed), so repo-init renames it at mint
 
 | `launcher.sh`
 | yes
@@ -171,7 +171,7 @@ predecessors did.
 
 | `profile/`
 | yes
-| -
+| GitHub organisation profile requires profile/README.md
 
 | `scripts/`
 | yes
