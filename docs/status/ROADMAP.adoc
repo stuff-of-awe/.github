@@ -1,20 +1,31 @@
 // SPDX-License-Identifier: CC-BY-SA-4.0
 = Organisation profile status
 
-Updated 2026-10-31.
+Updated 2026-11-01.
 
 == Prepared
 
 * Organisation-specific public profile and brand assets.
 * RSR identity and template provenance.
 * Contribution and support guidance appropriate for the organisation.
+* Community mission and all existing collection links surfaced in the profile.
+* Pinned ECHIDNA inventory: all 141 declared variants mapped, with 41 internal
+  dispatch entries distinguished from external tool ecosystems.
+* Vampire starter collection published with canonical resources, an unexecuted
+  proof example and contribution guidance.
+* Collection maintenance and provenance policy; remaining gaps explicitly planned.
 
 == Publication checks
 
-* Verify signed publication and the public GitHub rendering.
+* Branding PR #2 merged; verify the collection-profile update after its checks.
 * Apply the avatar and social preview through GitHub settings.
 * Review inherited automation against the organisation-profile capability scope; no estate-wide conformance score is claimed.
 
 == Continuing maintenance
 
 Keep links and shared community defaults current. New project links are added when repositories exist.
+
+Next: review existing Agda, Coq/Rocq and Idris2 resources; execute the Vampire
+example; research upstream Lean, Isabelle, Z3, cvc5 and F* collections; assign
+curators before claiming sustained maintenance. Continue through the complete
+link:../collections/CATALOGUE.adoc[coverage ledger].

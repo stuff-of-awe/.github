@@ -446,7 +446,8 @@ jobs:
           TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          DEED_NAME="${REPO#*/}_chora.deed"
+          DEED_STEM="${REPO#*/}"
+          DEED_NAME="${DEED_STEM#.}_chora.deed"
           DEED="$RUNNER_TEMP/repo.deed"
           API="https://api.github.com/repos/${REPO}/contents/${DEED_NAME}?ref=${HEAD_SHA}"
           if ! curl -fsSL --retry 3 --max-time 30 \

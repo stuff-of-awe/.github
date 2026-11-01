@@ -1,0 +1,62 @@
+// SPDX-License-Identifier: CC-BY-SA-4.0
+= Maintaining a Stuff of Awe collection
+
+== What belongs here
+
+Help a reader accomplish something: learn the foundations, install a tool,
+write a first example, find a library, inspect a proof, reproduce a result,
+or understand a limitation. Include independent community projects on the
+same terms as our own. Disclose affiliation. Stars and promotion are not
+substitutes for useful descriptions.
+
+Prefer canonical project documentation, source repositories, research papers,
+maintained teaching material and reproducible examples. Label historical
+resources, version-specific instructions, commercial restrictions and
+unverified integrations accurately.
+
+== Starting or adopting a collection
+
+. Search for existing collections and record the search date and candidates.
+. Decide whether to contribute upstream, maintain a documented local derivative,
+  or write a new list with a distinct scope.
+. Preserve existing attribution and licences. Record imported sources and local
+  changes; do not imply that original authors maintain our derivative.
+. Publish useful initial resources across getting started, reference, examples
+  and community sections. Record the initial curator and review date.
+. Add the repository to the organisation profile and coverage ledger only after
+  it exists and contains useful content.
+
+A planned name in the ledger is not an existing repository. Closely related
+variants can share a list: Coq/Rocq, Lean generations, Cubical Agda, Isabelle
+components and UPPAAL variants should retain their distinctions within it.
+
+== Entry and review requirements
+
+An entry should have its canonical URL, a short original description, intended
+audience or task, and relevant version or maintenance caveats. Do not copy
+descriptions wholesale from another list.
+
+The collection README records its last review date and who handles triage.
+Contributors propose additions or corrections by issue or pull request in that
+collection; organisation-wide gaps belong in this .github repository.
+
+Aim for a quarterly review of links, scope and upstream changes. Link-checker
+success alone does not establish that instructions still work. Record tested
+tool versions and commands when claiming an example has been executed.
+Unexecuted examples must say so. Review upstream changes before importing them.
+Move abandoned resources to a clearly labelled historical section when they
+retain educational value.
+
+== Coverage maintenance
+
+When ECHIDNA changes, compare its ProverKind declaration with the pinned source
+in CATALOGUE.adoc, review additions, removals and aliases, and update the source
+commit and review date. Do not equate a dispatcher enum with runtime support.
+Internal type disciplines belong in a shared conceptual collection unless
+there is a separately usable tool with enough resources to justify its own list.
+
+Track collection maturity separately from tool maturity. Mark a list as
+maintained only when someone has accepted its review work; otherwise retain
+starter status and invite curators. No automated maintenance schedule is
+implied by this policy.
+
