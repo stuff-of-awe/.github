@@ -577,8 +577,8 @@
           :reject-if-project-name-mismatch #t
           :staleness-threshold-days 90
           :fallback-files ("TODO.md" "TODO.adoc" "ROADMAP.adoc" "README.adoc"))))
-    (coverage (metadata :version "1.0.0" :last-updated "2026-10-31") (visited :components ("profile" "branding" "identity" "contribution-guidance")) (validation :status "local-checks-run; signed publication pending"))
-    (debt (metadata :version "1.0.0" :last-updated "2026-10-31") (item :priority "must" :description "Publish through a signed commit route and verify live rendering.") (item :priority "intend" :description "Review inherited application scaffolding and workflows against profile-only capabilities."))
+    (coverage (metadata :version "1.0.0" :last-updated "2026-11-01") (visited :components ("profile" "branding" "identity" "contribution-guidance" "echidna-inventory" "collection-maintenance")) (validation :status "141 declared ECHIDNA kinds accounted for; profile and RSR checks run; runtime support not asserted"))
+    (debt (metadata :version "1.0.0" :last-updated "2026-11-01") (item :priority "should" :description "Complete upstream collection research and curator assignment for planned ecosystems in docs/collections/CATALOGUE.adoc.") (item :priority "should" :description "Review existing collection provenance and link health; execute and record Vampire example results.") (item :priority "intend" :description "Review inherited application scaffolding and workflows against profile-only capabilities; apply organisation avatar and social preview settings."))
     ; rra — directives for Robot Repo Automaton (RRA) enforcing the Platonic Ideal root.
     (rra
       :target "robot-repo-automaton"

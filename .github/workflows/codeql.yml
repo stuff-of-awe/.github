@@ -7,7 +7,7 @@ on:
   pull_request:
     branches: [main, master]
   schedule:
-    - cron: '0 6 1 * *'   # monthly 1st 06:00 UTC (Actions burn cut, standards#288)
+    - cron: '29 22 * * 4' # preserve the weekly cadence of the replaced default setup
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -24,12 +24,13 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          # Default to `actions` — scaffolded repos rarely have JS/TS
-          # failures on every CodeQL run. The `actions` extractor scans
-          # workflow files which every repo has. Override per-repo if
-          # the scaffolded project actually contains JS/TS code.
-          # Per hypatia rule `codeql_language_matrix_mismatch`.
+          # Preserve all three languages detected by GitHub default setup.
+          # This workflow is the advanced-setup replacement, not a second uploader.
           - language: actions
+            build-mode: none
+          - language: javascript-typescript
+            build-mode: none
+          - language: rust
             build-mode: none
     steps:
       - name: Checkout
@@ -41,6 +42,7 @@ jobs:
         with:
           languages: ${{ matrix.language }}
           build-mode: ${{ matrix.build-mode }}
+          queries: security-extended
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@9b3254085494b55a0f7c4c2b3d2d52cc712ce370 # v4.38.0 (4.38.1 blocked estate-wide; nexia-list#100)
         with:
