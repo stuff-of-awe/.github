@@ -1,0 +1,266 @@
+// SPDX-License-Identifier: CC-BY-SA-4.0
+= Provers, solvers and mathematical tools: coverage ledger
+:toc:
+
+Reviewed 2026-11-01.
+
+== Purpose and evidence
+
+Stuff of Awe is building maintained, practical collections for the mathematics,
+logic and formal-methods communities. ECHIDNA supplies an initial coverage floor,
+not a boundary: resources need not integrate with ECHIDNA or belong to our estate.
+
+This ledger accounts for all *141 declared ProverKind variants* in
+https://github.com/hyperpolymath/echidna/blob/916b7690a30bc3a42fd225d1c32140f41f20a580/crates/echidna-core/src/prover_kind.rs[ECHIDNA at commit 916b7690].
+There are 100 entries outside the contiguous 41-entry internal dispatcher family.
+These are declaration counts, not counts of independent products, tested adapters,
+working installations or completed collections. Aliases and related ecosystems
+share a collection where appropriate.
+
+* *Existing*: a local repository exists; its completeness and link health still require review.
+* *Starter*: an initial curated collection; ongoing expansion and review remain.
+* *Planned*: a proposed repository name, deliberately not a link to a nonexistent repository.
+* *Internal*: an ECHIDNA/estate dispatch category to document within a shared type-systems collection.
+
+The upstream awesome-list survey is preliminary, not exhaustive. A search that
+finds no exact name does not establish that no useful collection exists.
+
+== Existing collections beyond the baseline
+
+The organisation also has https://github.com/stuff-of-awe/awesome-fsharp[F#],
+https://github.com/stuff-of-awe/awesome-haskell[Haskell],
+https://github.com/stuff-of-awe/awesome-ocaml[OCaml],
+https://github.com/stuff-of-awe/awesome-gleam[Gleam],
+https://github.com/stuff-of-awe/awesome-zig[Zig],
+https://github.com/stuff-of-awe/awesome-nickel[Nickel],
+https://github.com/stuff-of-awe/awesome-ipfs[IPFS], and
+https://github.com/stuff-of-awe/awesome-provable[provable code].
+F# and F* are different languages; awesome-fsharp does not cover ECHIDNA's FStar entry.
+
+== Inventory
+
+=== Proof assistants and logical frameworks
+
+[cols="1,2,1",options="header"]
+|===
+|ECHIDNA variant |Collection destination |State
+|Agda |https://github.com/stuff-of-awe/awesome-agda[awesome-agda] |Existing
+|Coq |https://github.com/stuff-of-awe/awesome-coq[awesome-coq] |Existing
+|Lean |`awesome-lean` |Planned
+|Isabelle |`awesome-isabelle` |Planned
+|Metamath |`awesome-metamath` |Planned
+|HOLLight |`awesome-hol-light` |Planned
+|Mizar |`awesome-mizar` |Planned
+|PVS |`awesome-pvs` |Planned
+|ACL2 |`awesome-acl2` |Planned
+|HOL4 |`awesome-hol4` |Planned
+|Idris2 |https://github.com/stuff-of-awe/awesome-idris2[awesome-idris2] |Existing
+|Lean3 |`awesome-lean` |Planned
+|TLAPS |`awesome-tlaps` |Planned
+|Twelf |`awesome-twelf` |Planned
+|Nuprl |`awesome-nuprl` |Planned
+|Minlog |`awesome-minlog` |Planned
+|Abella |`awesome-abella` |Planned
+|Dedukti |`awesome-dedukti` |Planned
+|ACL2s |`awesome-acl2` |Planned
+|IsabelleZF |`awesome-isabelle` |Planned
+|Naproche |`awesome-naproche` |Planned
+|Matita |`awesome-matita` |Planned
+|Arend |`awesome-arend` |Planned
+|Athena |`awesome-athena` |Planned
+|CubicalAgda |https://github.com/stuff-of-awe/awesome-agda[awesome-agda] |Existing
+|Rocq |https://github.com/stuff-of-awe/awesome-coq[awesome-coq] |Existing
+|MizAR |`awesome-mizar` |Planned
+|===
+
+=== Automated theorem proving
+
+[cols="1,2,1",options="header"]
+|===
+|ECHIDNA variant |Collection destination |State
+|Vampire |https://github.com/stuff-of-awe/awesome-vampire[awesome-vampire] |Starter
+|EProver |`awesome-eprover` |Planned
+|SPASS |`awesome-spass` |Planned
+|Leo3 |`awesome-leo3` |Planned
+|Satallax |`awesome-satallax` |Planned
+|Lash |`awesome-lash` |Planned
+|AgsyHOL |`awesome-agsyhol` |Planned
+|IProver |`awesome-iprover` |Planned
+|Princess |`awesome-princess` |Planned
+|Twee |`awesome-twee` |Planned
+|MetiTarski |`awesome-metitarski` |Planned
+|MleanCoP |`awesome-mleancop` |Planned
+|IleanCoP |`awesome-ileancop` |Planned
+|NanoCoP |`awesome-nanocop` |Planned
+|MetTeL2 |`awesome-mettel2` |Planned
+|Zipperposition |`awesome-zipperposition` |Planned
+|Prover9 |`awesome-prover9` |Planned
+|===
+
+=== SMT, SAT and arithmetic
+
+[cols="1,2,1",options="header"]
+|===
+|ECHIDNA variant |Collection destination |State
+|Z3 |`awesome-z3` |Planned
+|CVC5 |`awesome-cvc5` |Planned
+|AltErgo |`awesome-altergo` |Planned
+|Qepcad |`awesome-qepcad` |Planned
+|Redlog |`awesome-redlog` |Planned
+|CaDiCaL |`awesome-cadical` |Planned
+|Kissat |`awesome-kissat` |Planned
+|MiniSat |`awesome-minisat` |Planned
+|DReal |`awesome-dreal` |Planned
+|OpenSmt |`awesome-opensmt` |Planned
+|SmtRat |`awesome-smt-rat` |Planned
+|===
+
+=== Program verification and type systems
+
+[cols="1,2,1",options="header"]
+|===
+|ECHIDNA variant |Collection destination |State
+|FStar |`awesome-fstar` |Planned
+|Dafny |`awesome-dafny` |Planned
+|Why3 |`awesome-why3` |Planned
+|GNATprove |`awesome-gnatprove` |Planned
+|Stainless |`awesome-stainless` |Planned
+|LiquidHaskell |`awesome-liquidhaskell` |Planned
+|Imandra |`awesome-imandra` |Planned
+|TypedWasm |`awesome-typedwasm` |Planned
+|CBMC |`awesome-cbmc` |Planned
+|SeaHorn |`awesome-seahorn` |Planned
+|FramaC |`awesome-framac` |Planned
+|Viper |`awesome-viper` |Planned
+|KeY |`awesome-key` |Planned
+|GPUVerify |`awesome-gpuverify` |Planned
+|Faial |`awesome-faial` |Planned
+|Cameleer |`awesome-cameleer` |Planned
+|Boogie |`awesome-boogie` |Planned
+|LambdaProlog |`awesome-lambdaprolog` |Planned
+|Mercury |`awesome-mercury` |Planned
+|CSI |`awesome-csi` |Planned
+|AProVE |`awesome-aprove` |Planned
+|===
+
+=== Models, protocols and knowledge
+
+[cols="1,2,1",options="header"]
+|===
+|ECHIDNA variant |Collection destination |State
+|KeYmaeraX |`awesome-keymaerax` |Planned
+|ELK |`awesome-elk` |Planned
+|Konclude |`awesome-konclude` |Planned
+|Storm |`awesome-storm` |Planned
+|ProB |`awesome-prob` |Planned
+|EasyCrypt |`awesome-easycrypt` |Planned
+|CryptoVerif |`awesome-cryptoverif` |Planned
+|SPIN |`awesome-spin` |Planned
+|NuSMV |`awesome-nusmv` |Planned
+|TLC |`awesome-tlc` |Planned
+|Alloy |`awesome-alloy` |Planned
+|Prism |`awesome-prism` |Planned
+|UPPAAL |`awesome-uppaal` |Planned
+|Tamarin |`awesome-tamarin` |Planned
+|ProVerif |`awesome-proverif` |Planned
+|ABC |`awesome-abc` |Planned
+|Nitpick |`awesome-isabelle` |Planned
+|Nunchaku |`awesome-nunchaku` |Planned
+|UppaalStratego |`awesome-uppaal` |Planned
+|===
+
+=== Constraint programming and optimisation
+
+[cols="1,2,1",options="header"]
+|===
+|ECHIDNA variant |Collection destination |State
+|GLPK |`awesome-glpk` |Planned
+|SCIP |`awesome-scip` |Planned
+|MiniZinc |`awesome-minizinc` |Planned
+|Chuffed |`awesome-chuffed` |Planned
+|ORTools |`awesome-or-tools` |Planned
+|===
+
+=== Internal dispatch family
+
+These 41 variants are grouped under proposed `awesome-type-systems`. Their presence
+in the enum is not evidence of 41 separate released provers. Keep implementation
+status and research references explicit before presenting them as usable tools.
+
+[cols="1,2",options="header"]
+|===
+|ECHIDNA variant |Destination / state
+|TypeLL |`awesome-type-systems` / Internal
+|KatagoriaVerifier |`awesome-type-systems` / Internal
+|TropicalTypeChecker |`awesome-type-systems` / Internal
+|ChoreographicTypeChecker |`awesome-type-systems` / Internal
+|EpistemicTypeChecker |`awesome-type-systems` / Internal
+|EchoTypeChecker |`awesome-type-systems` / Internal
+|SessionTypeChecker |`awesome-type-systems` / Internal
+|ModalTypeChecker |`awesome-type-systems` / Internal
+|QTTTypeChecker |`awesome-type-systems` / Internal
+|EffectRowTypeChecker |`awesome-type-systems` / Internal
+|DependentTypeChecker |`awesome-type-systems` / Internal
+|RefinementTypeChecker |`awesome-type-systems` / Internal
+|OrdinaryTypeChecker |`awesome-type-systems` / Internal
+|PhantomTypeChecker |`awesome-type-systems` / Internal
+|PolymorphicTypeChecker |`awesome-type-systems` / Internal
+|ExistentialTypeChecker |`awesome-type-systems` / Internal
+|HigherKindedTypeChecker |`awesome-type-systems` / Internal
+|RowTypeChecker |`awesome-type-systems` / Internal
+|SubtypingTypeChecker |`awesome-type-systems` / Internal
+|IntersectionTypeChecker |`awesome-type-systems` / Internal
+|UnionTypeChecker |`awesome-type-systems` / Internal
+|GradualTypeChecker |`awesome-type-systems` / Internal
+|HoareTypeChecker |`awesome-type-systems` / Internal
+|IndexedTypeChecker |`awesome-type-systems` / Internal
+|LinearTypeChecker |`awesome-type-systems` / Internal
+|AffineTypeChecker |`awesome-type-systems` / Internal
+|RelevantTypeChecker |`awesome-type-systems` / Internal
+|OrderedTypeChecker |`awesome-type-systems` / Internal
+|UniquenessTypeChecker |`awesome-type-systems` / Internal
+|ImmutableTypeChecker |`awesome-type-systems` / Internal
+|CapabilityTypeChecker |`awesome-type-systems` / Internal
+|BunchedTypeChecker |`awesome-type-systems` / Internal
+|TemporalTypeChecker |`awesome-type-systems` / Internal
+|ProvabilityTypeChecker |`awesome-type-systems` / Internal
+|ImpureTypeChecker |`awesome-type-systems` / Internal
+|CoeffectTypeChecker |`awesome-type-systems` / Internal
+|ProbabilisticTypeChecker |`awesome-type-systems` / Internal
+|DyadicTypeChecker |`awesome-type-systems` / Internal
+|HomotopyTypeChecker |`awesome-type-systems` / Internal
+|CubicalTypeChecker |`awesome-type-systems` / Internal
+|NominalTypeChecker |`awesome-type-systems` / Internal
+|===
+
+== Upstream discovery and attribution
+
+Initial candidates found on 2026-11-01:
+
+* https://github.com/freeman42x/awesome-agda-programming[awesome-agda-programming]
+  and https://github.com/biocini/awesome-agda[awesome-agda]: compare scope and
+  provenance with the existing local Agda collection before importing changes.
+* https://github.com/fsprojects/awesome-fsharp[fsprojects/awesome-fsharp]:
+  an upstream F# collection to compare with our existing local collection.
+* https://github.com/pintjuk/awesome-theorem-proving[awesome-theorem-proving]:
+  a cross-ecosystem discovery source.
+
+Discovery does not imply endorsement, permission to copy, current maintenance,
+or an established upstream relationship. Preserve authorship, licences and
+history when importing material. Contribute fixes upstream where appropriate.
+For Vampire, no dedicated awesome-vampire result was found in the initial search;
+the starter uses original descriptions and canonical project resources.
+
+== Next collection releases
+
+. Review and strengthen the existing Agda, Coq/Rocq, Idris2 and provable-code lists.
+. Expand the Vampire starter with worked proof workflows and community contributions.
+. Research upstream lists and prepare Lean, Isabelle, Z3, cvc5 and F* collections.
+. Continue through the complete ledger by family, including less prominent tools.
+. Add mathematical software beyond ECHIDNA; JTV and AffineScript can have their
+  own collections once useful public resources exist.
+
+Each release needs useful initial content, provenance, a curator or explicit
+call for one, contribution guidance and a dated review. A repository name alone
+does not count as maintained coverage. See link:MAINTENANCE.adoc[the maintenance policy].
+
