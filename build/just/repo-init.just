@@ -647,6 +647,11 @@ repo-init archetype="":
         # character. Escaped inline so self_name_pass_test.sh can evaluate this
         # one assignment exactly as the recipe defines it.
         SELF_NAME_SED="/${SELF_PROV}/!{s|${TEMPLATE_REPO//./\\.}#([0-9])|__TEMPLATE_ISSUE__\\1|g;s|${TEMPLATE_SLUG//./\\.}|${OWNER}/${REPO}|g;s|${TEMPLATE_REPO//./\\.}|${REPO}|g;s|__TEMPLATE_ISSUE__|${TEMPLATE_REPO}#|g;}"
+        # Bare .github names the workflow directory as well as this repository.
+        # Only a qualified slug or a Justfile identity assignment is unambiguous.
+        if [ "$TEMPLATE_REPO" = ".github" ]; then
+            SELF_NAME_SED="/${SELF_PROV}/!{s~${TEMPLATE_SLUG//./\\.}($|[^#[:alnum:]_.-])~${OWNER}/${REPO}\\1~g;s~^((REPO|project)[[:space:]]*:=[[:space:]]*)\"\\.github\"~\\1\"${REPO}\"~;}"
+        fi
         # Paths that are ABOUT the template keep its name wholesale: its ADRs,
         # changelog and audits. Template machinery (this recipe, the tests whose
         # fixtures must stay the template's literal name) is not in mint_files

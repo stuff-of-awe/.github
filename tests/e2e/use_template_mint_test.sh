@@ -96,7 +96,7 @@ C_HEAD=$(g -C "$C" rev-parse HEAD)
 # The probe carries all three things the rewrite passes act on.
 LB='{{'; RB='}}'
 probe="<!-- TEMPLATE INSTRUCTIONS: delete this block -->
-${TEMPLATE_REPO} by ${LB}OWNER${RB}"
+${T_SLUG} by ${LB}OWNER${RB}"
 # An ignored sibling checkout, like lintel's _build/dependencies/<sibling>/.
 mkdir -p "$C/_build/dependencies/sibling"
 printf '%s\n' "$probe" > "$C/_build/dependencies/sibling/README.md"
