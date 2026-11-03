@@ -74,7 +74,7 @@ jobs:
 
           # --- unfixable compliance gaps (also drift) ---
           ls *_chora.deed >/dev/null 2>&1 || warn "missing repo deed (*_chora.deed at the root)"
-          [ -f "LICENSE" ] || [ -f "LICENSE.md" ] || [ -f "LICENSE.txt" ] || warn "missing LICENSE file"
+          [ -f "LICENSE" ] || [ -f "LICENSE.md" ] || [ -f "LICENSE.txt" ] || [ -f "LICENSE.adoc" ] || warn "missing LICENSE file"
           [ -f "README.adoc" ] || [ -f "README.md" ] || warn "missing README"
 
           # --- advisory only: dangerous verification-bypass patterns ---

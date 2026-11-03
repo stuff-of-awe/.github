@@ -207,7 +207,14 @@ wiring_checks() {
     fi
 
     echo "  --- the badge URL and the orphan guarantee survive ---"
-    has "README still reads the stable raw URL" 'raw\.githubusercontent\.com/\{\{OWNER\}\}/\{\{REPO\}\}/governance-badges/badges/k9\.json' "$README"
+    local owner repo
+    owner=$(sed -nE 's/^OWNER *:= *"([^"]+)".*/\1/p' "$REPO_DIR/Justfile")
+    repo=$(sed -nE 's/^REPO *:= *"([^"]+)".*/\1/p' "$REPO_DIR/Justfile")
+    if [[ -n "$owner" && -n "$repo" ]] && grep -Fq "https://raw.githubusercontent.com/$owner/$repo/governance-badges/badges/k9.json" "$README"; then
+        wire_pass "README links to this repository's K9 badge"
+    else
+        wire_fail "README missing K9 badge for $owner/$repo"
+    fi
     has "the orphan commit is built with no parents" 'parents: \[\]' "$HELPER"
     hasnt "the helper never names a source branch as a ref" 'refs/heads/(main|master)' "$HELPER"
 

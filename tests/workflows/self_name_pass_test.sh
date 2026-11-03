@@ -25,6 +25,7 @@ prog=$(grep -m1 -E '^ +SELF_NAME_SED="' "$recipe") || { echo "FAIL: no SELF_NAME
 rule_script=$(mktemp)
 trap 'rm -f "$rule_script"' EXIT
 printf '%s\n%s\n' "$prov" "$prog" > "$rule_script"
+sed -n '/^        if \[ "\$TEMPLATE_REPO" = "\.github" \]; then$/,/^        fi$/p' "$recipe" >> "$rule_script"
 # The recipe must derive the template's identity instead of naming one.
 grep -qE 'TEMPLATE_REPO=.*Justfile' "$recipe" \
   || { echo "FAIL: repo-init does not read TEMPLATE_REPO from the Justfile" >&2; exit 1; }
@@ -93,6 +94,14 @@ OWNER=example-owner REPO=mint-check
 . "$rule_script"
 check 'project := "Geometry.jl"' 'project := "mint-check"'
 check 'Geometry.jl ships it; GeometryXjl is another string' 'mint-check ships it; GeometryXjl is another string'
+
+TEMPLATE_OWNER=example-org TEMPLATE_REPO=.github
+TEMPLATE_SLUG="$TEMPLATE_OWNER/$TEMPLATE_REPO"
+. "$rule_script"
+check 'example-org/.github/issues' 'example-owner/mint-check/issues'
+check 'example-org/.github#7' 'example-org/.github#7'
+check 'REPO := ".github"' 'REPO := "mint-check"'
+check '.github/SECURITY.md and api.github.com' '.github/SECURITY.md and api.github.com'
 
 [ "$fail" -eq 0 ] || { echo "FAIL: self-name pass" >&2; exit 1; }
 echo 'PASS: self-name pass rewrites the derived template name, keeps issue references, provenance and detectors'

@@ -6,6 +6,8 @@ Organisation profile, curated-list guidance and community defaults for awesome c
 The public organisation page is rendered from link:profile/README.md[profile/README.md].
 This repository is instantiated from https://github.com/hyperpolymath/rsr-template-repo[the RSR template]. It is not a game, library, or deployable service.
 
+image:https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/stuff-of-awe/.github/governance-badges/badges/k9.json[K9 deed conformance,link=https://github.com/stuff-of-awe/.github/actions/workflows/dogfood-gate.yml]
+
 == Layout
 
 * profile/README.md: public introduction.
