@@ -31,7 +31,7 @@ The [coverage ledger](https://github.com/stuff-of-awe/.github/blob/main/docs/col
 
 We want practical, locally maintained collections: clear descriptions, canonical documentation, learning paths, libraries, examples and honest limitations. Where good lists already exist, we will credit and work with them. Where there is a gap, we will develop a useful collection here.
 
-Lean, Isabelle, Z3, cvc5 and F* are among the next priorities. F* is distinct from F#. Collections for JTV, AffineScript and other projects can follow as public resources become available.
+Start with a learning path in [Lean](https://github.com/stuff-of-awe/awesome-lean), [Isabelle](https://github.com/stuff-of-awe/awesome-isabelle), [Z3](https://github.com/stuff-of-awe/awesome-z3), [cvc5](https://github.com/stuff-of-awe/awesome-cvc5), [F*](https://github.com/stuff-of-awe/awesome-fstar). The F* collection covers proof-oriented programming. The F# collection above covers the separate .NET language. Collections for JTV, AffineScript and other projects can follow as public resources become available.
 
 ## Help make it useful
 
