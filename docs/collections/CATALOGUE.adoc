@@ -46,8 +46,8 @@ F# and F* are different languages; awesome-fsharp does not cover ECHIDNA's FStar
 |ECHIDNA variant |Collection destination |State
 |Agda |https://github.com/stuff-of-awe/awesome-agda[awesome-agda] |Existing
 |Coq |https://github.com/stuff-of-awe/awesome-coq[awesome-coq] |Existing
-|Lean |`awesome-lean` |Planned
-|Isabelle |`awesome-isabelle` |Planned
+|Lean |https://github.com/stuff-of-awe/awesome-lean[awesome-lean] |Starter
+|Isabelle |https://github.com/stuff-of-awe/awesome-isabelle[awesome-isabelle] |Starter
 |Metamath |`awesome-metamath` |Planned
 |HOLLight |`awesome-hol-light` |Planned
 |Mizar |`awesome-mizar` |Planned
@@ -55,7 +55,7 @@ F# and F* are different languages; awesome-fsharp does not cover ECHIDNA's FStar
 |ACL2 |`awesome-acl2` |Planned
 |HOL4 |`awesome-hol4` |Planned
 |Idris2 |https://github.com/stuff-of-awe/awesome-idris2[awesome-idris2] |Existing
-|Lean3 |`awesome-lean` |Planned
+|Lean3 |https://github.com/stuff-of-awe/awesome-lean[awesome-lean] |Starter
 |TLAPS |`awesome-tlaps` |Planned
 |Twelf |`awesome-twelf` |Planned
 |Nuprl |`awesome-nuprl` |Planned
@@ -63,7 +63,7 @@ F# and F* are different languages; awesome-fsharp does not cover ECHIDNA's FStar
 |Abella |`awesome-abella` |Planned
 |Dedukti |`awesome-dedukti` |Planned
 |ACL2s |`awesome-acl2` |Planned
-|IsabelleZF |`awesome-isabelle` |Planned
+|IsabelleZF |https://github.com/stuff-of-awe/awesome-isabelle[awesome-isabelle] |Starter
 |Naproche |`awesome-naproche` |Planned
 |Matita |`awesome-matita` |Planned
 |Arend |`awesome-arend` |Planned
@@ -102,8 +102,8 @@ F# and F* are different languages; awesome-fsharp does not cover ECHIDNA's FStar
 [cols="1,2,1",options="header"]
 |===
 |ECHIDNA variant |Collection destination |State
-|Z3 |`awesome-z3` |Planned
-|CVC5 |`awesome-cvc5` |Planned
+|Z3 |https://github.com/stuff-of-awe/awesome-z3[awesome-z3] |Starter
+|CVC5 |https://github.com/stuff-of-awe/awesome-cvc5[awesome-cvc5] |Starter
 |AltErgo |`awesome-altergo` |Planned
 |Qepcad |`awesome-qepcad` |Planned
 |Redlog |`awesome-redlog` |Planned
@@ -120,7 +120,7 @@ F# and F* are different languages; awesome-fsharp does not cover ECHIDNA's FStar
 [cols="1,2,1",options="header"]
 |===
 |ECHIDNA variant |Collection destination |State
-|FStar |`awesome-fstar` |Planned
+|FStar |https://github.com/stuff-of-awe/awesome-fstar[awesome-fstar] |Starter
 |Dafny |`awesome-dafny` |Planned
 |Why3 |`awesome-why3` |Planned
 |GNATprove |`awesome-gnatprove` |Planned
@@ -164,7 +164,7 @@ F# and F* are different languages; awesome-fsharp does not cover ECHIDNA's FStar
 |Tamarin |`awesome-tamarin` |Planned
 |ProVerif |`awesome-proverif` |Planned
 |ABC |`awesome-abc` |Planned
-|Nitpick |`awesome-isabelle` |Planned
+|Nitpick |https://github.com/stuff-of-awe/awesome-isabelle[awesome-isabelle] |Starter
 |Nunchaku |`awesome-nunchaku` |Planned
 |UppaalStratego |`awesome-uppaal` |Planned
 |===
@@ -251,11 +251,16 @@ history when importing material. Contribute fixes upstream where appropriate.
 For Vampire, no dedicated awesome-vampire result was found in the initial search;
 the starter uses original descriptions and canonical project resources.
 
+On 2026-11-03 the Lean starter linked the independent catalogues by
+https://github.com/paolobrasolin/awesome-lean[Paolo Brasolin] and
+https://github.com/saviorand/awesome-lean-programming[saviorand].
+The four other new starters contain original annotations of project and community resources.
+
 == Next collection releases
 
 . Review and strengthen the existing Agda, Coq/Rocq, Idris2 and provable-code lists.
 . Expand the Vampire starter with worked proof workflows and community contributions.
-. Research upstream lists and prepare Lean, Isabelle, Z3, cvc5 and F* collections.
+. Recruit curators and collect version-tested examples for the Lean, Isabelle, Z3, cvc5 and F* starters.
 . Continue through the complete ledger by family, including less prominent tools.
 . Add mathematical software beyond ECHIDNA; JTV and AffineScript can have their
   own collections once useful public resources exist.
