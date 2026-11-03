@@ -201,8 +201,8 @@ g -C "$C" diff --quiet -- docs/architecture/REPOSITORY-MAP.adoc \
 # commit, after a removal), reproduces the stale map lintel shipped.
 SM="$work/stale-map"
 use_template "$SM"
-(cd "$SM" && rm -rf archetypes && bash scripts/gen-repo-map.sh . >/dev/null)
-grep -q '^| `archetypes' "$SM/docs/architecture/REPOSITORY-MAP.adoc" \
+(cd "$SM" && rm -- Justfile && bash scripts/gen-repo-map.sh . >/dev/null)
+grep -q '^| `Justfile' "$SM/docs/architecture/REPOSITORY-MAP.adoc" \
     || fail 'control: index mode no longer shows the pre-commit staleness; this check is vacuous'
 pass "the committed map is fresh (the index-mode control reproduces lintel's stale map)"
 
