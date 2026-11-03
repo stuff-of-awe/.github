@@ -650,7 +650,7 @@ repo-init archetype="":
         # Bare .github names the workflow directory as well as this repository.
         # Only a qualified slug or a Justfile identity assignment is unambiguous.
         if [ "$TEMPLATE_REPO" = ".github" ]; then
-            SELF_NAME_SED="/${SELF_PROV}/!{s~${TEMPLATE_SLUG//./\\.}($|[^#[:alnum:]_.-])~${OWNER}/${REPO}\\1~g;s~^((REPO|project)[[:space:]]*:=[[:space:]]*)\"\\.github\"~\\1\"${REPO}\"~;s~^(sonar\\.projectKey=.*_)\\.github$~\\1${REPO}~;}"
+            SELF_NAME_SED="/${SELF_PROV}/!{s~${TEMPLATE_SLUG//./\\.}(\\.git)?($|[^#[:alnum:]_.-])~${OWNER}/${REPO}\\1\\2~g;s~^((REPO|project)[[:space:]]*:=[[:space:]]*)\"\\.github\"~\\1\"${REPO}\"~;s~^(sonar\\.projectKey=.*_)\\.github$~\\1${REPO}~;}"
         fi
         # Paths that are ABOUT the template keep its name wholesale: its ADRs,
         # changelog and audits. Template machinery (this recipe, the tests whose
