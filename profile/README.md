@@ -20,6 +20,7 @@ Some resources come from our own workshop; many come from elsewhere. Inclusion d
 | [Idris 2](https://github.com/stuff-of-awe/awesome-idris2) | [OCaml](https://github.com/stuff-of-awe/awesome-ocaml) | |
 | [Provable code](https://github.com/stuff-of-awe/awesome-provable) | [Gleam](https://github.com/stuff-of-awe/awesome-gleam) | |
 | [Vampire — new starter collection](https://github.com/stuff-of-awe/awesome-vampire) | [Zig](https://github.com/stuff-of-awe/awesome-zig) | |
+| | [AffineScript — new starter collection](https://github.com/stuff-of-awe/awesome-affinescript) | |
 
 These collections are at different stages of development. A local repository is a place to curate and improve resources, not a claim that every entry has been recently tested.
 
@@ -31,7 +32,7 @@ The [coverage ledger](https://github.com/stuff-of-awe/.github/blob/main/docs/col
 
 We want practical, locally maintained collections: clear descriptions, canonical documentation, learning paths, libraries, examples and honest limitations. Where good lists already exist, we will credit and work with them. Where there is a gap, we will develop a useful collection here.
 
-Start with a learning path in [Lean](https://github.com/stuff-of-awe/awesome-lean), [Isabelle](https://github.com/stuff-of-awe/awesome-isabelle), [Z3](https://github.com/stuff-of-awe/awesome-z3), [cvc5](https://github.com/stuff-of-awe/awesome-cvc5), [F*](https://github.com/stuff-of-awe/awesome-fstar). The F* collection covers proof-oriented programming. The F# collection above covers the separate .NET language. Collections for JTV, AffineScript and other projects can follow as public resources become available.
+Start with a learning path in [Lean](https://github.com/stuff-of-awe/awesome-lean), [Isabelle](https://github.com/stuff-of-awe/awesome-isabelle), [Z3](https://github.com/stuff-of-awe/awesome-z3), [cvc5](https://github.com/stuff-of-awe/awesome-cvc5), [F*](https://github.com/stuff-of-awe/awesome-fstar). The F* collection covers proof-oriented programming. The F# collection above covers the separate .NET language. [AffineScript](https://github.com/stuff-of-awe/awesome-affinescript) is a starter index of language-specific resources with maturity caveats; collections for JTV and other projects can follow as useful public resources become available.
 
 ## Help make it useful
 

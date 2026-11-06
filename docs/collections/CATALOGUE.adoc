@@ -35,6 +35,9 @@ https://github.com/stuff-of-awe/awesome-zig[Zig],
 https://github.com/stuff-of-awe/awesome-nickel[Nickel],
 https://github.com/stuff-of-awe/awesome-ipfs[IPFS], and
 https://github.com/stuff-of-awe/awesome-provable[provable code].
+The https://github.com/stuff-of-awe/awesome-affinescript[AffineScript starter]
+was added on 2026-11-06 with language-specific tutorials, reference material,
+examples and contribution guidance. It is outside this ECHIDNA variant count.
 F# and F* are different languages; awesome-fsharp does not cover ECHIDNA's FStar entry.
 
 == Inventory
@@ -262,8 +265,9 @@ The four other new starters contain original annotations of project and communit
 . Expand the Vampire starter with worked proof workflows and community contributions.
 . Recruit curators and collect version-tested examples for the Lean, Isabelle, Z3, cvc5 and F* starters.
 . Continue through the complete ledger by family, including less prominent tools.
-. Add mathematical software beyond ECHIDNA; JTV and AffineScript can have their
-  own collections once useful public resources exist.
+. Add mathematical software beyond ECHIDNA. Expand the AffineScript starter
+  with independent resources; JTV can have its own collection once useful
+  public resources exist.
 
 Each release needs useful initial content, provenance, a curator or explicit
 call for one, contribution guidance and a dated review. A repository name alone
