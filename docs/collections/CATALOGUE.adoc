@@ -2,7 +2,7 @@
 = Provers, solvers and mathematical tools: coverage ledger
 :toc:
 
-Reviewed 2026-11-01.
+Reviewed 2026-11-07.
 
 == Purpose and evidence
 
@@ -11,7 +11,7 @@ logic and formal-methods communities. ECHIDNA supplies an initial coverage floor
 not a boundary: resources need not integrate with ECHIDNA or belong to our estate.
 
 This ledger accounts for all *141 declared ProverKind variants* in
-https://github.com/hyperpolymath/echidna/blob/916b7690a30bc3a42fd225d1c32140f41f20a580/crates/echidna-core/src/prover_kind.rs[ECHIDNA at commit 916b7690].
+https://github.com/hyperpolymath/echidna/blob/a81467bbbf0b142dc016eda7c9b16b55d3962734/crates/echidna-core/src/prover_kind.rs[ECHIDNA at commit a81467b].
 There are 100 entries outside the contiguous 41-entry internal dispatcher family.
 These are declaration counts, not counts of independent products, tested adapters,
 working installations or completed collections. Aliases and related ecosystems
@@ -21,6 +21,10 @@ share a collection where appropriate.
 * *Starter*: an initial curated collection; ongoing expansion and review remain.
 * *Planned*: a proposed repository name, deliberately not a link to a nonexistent repository.
 * *Internal*: an ECHIDNA/estate dispatch category to document within a shared type-systems collection.
+
+`Planned` records a research topic, not a commitment to create one repository
+per variant. Prefer a useful family collection or an existing maintained
+upstream list when several tools belong together.
 
 The upstream awesome-list survey is preliminary, not exhaustive. A search that
 finds no exact name does not establish that no useful collection exists.
@@ -51,12 +55,12 @@ F# and F* are different languages; awesome-fsharp does not cover ECHIDNA's FStar
 |Coq |https://github.com/stuff-of-awe/awesome-coq[awesome-coq] |Existing
 |Lean |https://github.com/stuff-of-awe/awesome-lean[awesome-lean] |Starter
 |Isabelle |https://github.com/stuff-of-awe/awesome-isabelle[awesome-isabelle] |Starter
-|Metamath |`awesome-metamath` |Planned
-|HOLLight |`awesome-hol-light` |Planned
-|Mizar |`awesome-mizar` |Planned
-|PVS |`awesome-pvs` |Planned
+|Metamath |https://github.com/stuff-of-awe/awesome-metamath[awesome-metamath] |Existing
+|HOLLight |https://github.com/stuff-of-awe/awesome-hol-light[awesome-hol-light] |Existing
+|Mizar |https://github.com/stuff-of-awe/awesome-mizar[awesome-mizar] |Existing
+|PVS |https://github.com/stuff-of-awe/awesome-pvs[awesome-pvs] |Existing
 |ACL2 |`awesome-acl2` |Planned
-|HOL4 |`awesome-hol4` |Planned
+|HOL4 |https://github.com/stuff-of-awe/awesome-hol4[awesome-hol4] |Existing
 |Idris2 |https://github.com/stuff-of-awe/awesome-idris2[awesome-idris2] |Existing
 |Lean3 |https://github.com/stuff-of-awe/awesome-lean[awesome-lean] |Starter
 |TLAPS |`awesome-tlaps` |Planned
@@ -73,7 +77,7 @@ F# and F* are different languages; awesome-fsharp does not cover ECHIDNA's FStar
 |Athena |`awesome-athena` |Planned
 |CubicalAgda |https://github.com/stuff-of-awe/awesome-agda[awesome-agda] |Existing
 |Rocq |https://github.com/stuff-of-awe/awesome-coq[awesome-coq] |Existing
-|MizAR |`awesome-mizar` |Planned
+|MizAR |https://github.com/stuff-of-awe/awesome-mizar[awesome-mizar] |Existing
 |===
 
 === Automated theorem proving
@@ -235,6 +239,26 @@ status and research references explicit before presenting them as usable tools.
 |CubicalTypeChecker |`awesome-type-systems` / Internal
 |NominalTypeChecker |`awesome-type-systems` / Internal
 |===
+
+== Verification tools and language resources
+
+The ECHIDNA variant list is a declaration inventory. Its
+https://github.com/hyperpolymath/echidna/blob/main/.machine_readable/verification-integrations.a2ml[verification integration ledger]
+separates backend declarations from corpus-only, internal-proof, and
+non-prover roles. A language or specification notation does not need its
+own `ProverKind` merely to be useful.
+
+* Rust verification: https://github.com/stuff-of-awe/awesome-provable[awesome-provable]
+  groups Creusot with Pearlite, Verus, Kani and Aeneas in one verifier section.
+  Pearlite is part of Creusot, not another solver. Do not create five thin
+  collection repositories for these related tools.
+* Ada/SPARK: ECHIDNA declares a GNATprove backend. The external
+  https://github.com/ohenley/awesome-ada[awesome-ada] already covers Ada and
+  SPARK; review contributions there before starting a duplicate local list.
+* Chapel and ATS2: neither is an ECHIDNA prover. Chapel is used as proof-search
+  compute infrastructure; ATS2 is a programming language and type system.
+  Language-resource collections remain candidates, subject to independent
+  curation and compiler-level verification of any first-party tools included.
 
 == Upstream discovery and attribution
 
