@@ -24,6 +24,16 @@ Some resources come from our own workshop; many come from elsewhere. Inclusion d
 
 These collections are at different stages of development. A local repository is a place to curate and improve resources, not a claim that every entry has been recently tested.
 
+## New proving, checking and solver collections (November 2026)
+
+New **starter** collections: [ACL2/ACL2s](https://github.com/stuff-of-awe/awesome-acl2) · [Dafny](https://github.com/stuff-of-awe/awesome-dafny) · [Why3/WhyML](https://github.com/stuff-of-awe/awesome-why3) · [E theorem prover](https://github.com/stuff-of-awe/awesome-eprover) · [Dedukti/Lambdapi](https://github.com/stuff-of-awe/awesome-dedukti) · [proof checkers and verified machines](https://github.com/stuff-of-awe/awesome-proof-checking) · [automated theorem proving](https://github.com/stuff-of-awe/awesome-automated-theorem-proving) · [SAT solving](https://github.com/stuff-of-awe/awesome-sat-solvers) · [model checking](https://github.com/stuff-of-awe/awesome-model-checking) · [protocol verification](https://github.com/stuff-of-awe/awesome-protocol-verification) · [constraint solving](https://github.com/stuff-of-awe/awesome-constraint-solving).
+
+These lists have original source annotations and contribution guidance, but no
+independently executed proof/certificate receipts or committed curator. Each
+family covers several ECHIDNA names without treating every name as a separate
+product. The [coverage ledger](https://github.com/stuff-of-awe/.github/blob/main/docs/collections/CATALOGUE.adoc)
+distinguishes actual starters from remaining gaps.
+
 ## A home for provers and solvers
 
 [ECHIDNA](https://github.com/hyperpolymath/echidna) provides our starting coverage inventory: proof assistants, automated theorem provers, SMT and SAT solvers, model checkers, verification tools and optimisation systems. **It is a starting point, not the limit of our scope.**

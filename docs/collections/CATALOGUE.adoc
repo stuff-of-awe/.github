@@ -2,11 +2,40 @@
 = Provers, solvers and mathematical tools: coverage ledger
 :toc:
 
-Reviewed 2026-11-07.
+Baseline reviewed 2026-11-07; new collection mapping reviewed 2026-11-15.
 
 == Follow-up audit (2026-11-15)
 
 The link:CROSS-ESTATE-GAPS-2026-11-15.adoc[cross-estate reconnaissance and checker inventory] reconciles the existing 141-variant ledger with targeted source evidence from Hyperpolymath, Metadatastician and Catachresis Colloquium. It also distinguishes verified proof machines, independent checkers, certificate formats and proof-exchange systems. The follow-up is a partial audit; it does not change this ledger's 2026-11-07 review date or promote any Planned repository to Existing.
+
+See link:ESTATE-SOURCE-SAMPLE-2026-11-15.adoc[bounded cross-estate code evidence]
+for source-backed examples and places where a declared adapter is not a
+functioning prover interface.
+
+== New collections created 2026-11-15
+
+Eleven public starter repositories now have independently written annotated
+READMEs, CC-BY-SA-4.0 licence text and contribution guidance:
+
+* https://github.com/stuff-of-awe/awesome-acl2[ACL2/ACL2s (awesome-acl2)]
+* https://github.com/stuff-of-awe/awesome-dafny[Dafny (awesome-dafny)]
+* https://github.com/stuff-of-awe/awesome-why3[Why3/WhyML (awesome-why3)]
+* https://github.com/stuff-of-awe/awesome-eprover[E theorem prover (awesome-eprover)]
+* https://github.com/stuff-of-awe/awesome-dedukti[Dedukti/Lambdapi (awesome-dedukti)]
+* https://github.com/stuff-of-awe/awesome-proof-checking[proof checkers and verified machines (awesome-proof-checking)]
+* https://github.com/stuff-of-awe/awesome-automated-theorem-proving[automated theorem proving (awesome-automated-theorem-proving)]
+* https://github.com/stuff-of-awe/awesome-sat-solvers[SAT solving (awesome-sat-solvers)]
+* https://github.com/stuff-of-awe/awesome-model-checking[model checking (awesome-model-checking)]
+* https://github.com/stuff-of-awe/awesome-protocol-verification[protocol verification (awesome-protocol-verification)]
+* https://github.com/stuff-of-awe/awesome-constraint-solving[constraint solving (awesome-constraint-solving)]
+
+Their coverage does *not* establish tested integrations or independently checked
+proof results. Curators remain unassigned, review is still pending, and the
+temporary incident-containment merge rulesets remain active.
+
+The 100 non-internal variants now count as *11 Existing*, *15 Starter*,
+*20 Family starter* and *54 Planned*. The other 41 internal dispatcher types
+remain internal. Counts classify variant rows rather than unique systems.
 
 == Purpose and evidence
 
@@ -23,6 +52,7 @@ share a collection where appropriate.
 
 * *Existing*: a local repository exists; its completeness and link health still require review.
 * *Starter*: an initial curated collection; ongoing expansion and review remain.
+* *Family starter*: the named tool has an annotated link in a family list; this is not a separate tool-specific repository or an executed integration.
 * *Planned*: a proposed repository name, deliberately not a link to a nonexistent repository.
 * *Internal*: an ECHIDNA/estate dispatch category to document within a shared type-systems collection.
 
@@ -63,7 +93,7 @@ F# and F* are different languages; awesome-fsharp does not cover ECHIDNA's FStar
 |HOLLight |https://github.com/stuff-of-awe/awesome-hol-light[awesome-hol-light] |Existing
 |Mizar |https://github.com/stuff-of-awe/awesome-mizar[awesome-mizar] |Existing
 |PVS |https://github.com/stuff-of-awe/awesome-pvs[awesome-pvs] |Existing
-|ACL2 |`awesome-acl2` |Planned
+|ACL2 |https://github.com/stuff-of-awe/awesome-acl2[awesome-acl2] |Starter
 |HOL4 |https://github.com/stuff-of-awe/awesome-hol4[awesome-hol4] |Existing
 |Idris2 |https://github.com/stuff-of-awe/awesome-idris2[awesome-idris2] |Existing
 |Lean3 |https://github.com/stuff-of-awe/awesome-lean[awesome-lean] |Starter
@@ -72,8 +102,8 @@ F# and F* are different languages; awesome-fsharp does not cover ECHIDNA's FStar
 |Nuprl |`awesome-nuprl` |Planned
 |Minlog |`awesome-minlog` |Planned
 |Abella |`awesome-abella` |Planned
-|Dedukti |`awesome-dedukti` |Planned
-|ACL2s |`awesome-acl2` |Planned
+|Dedukti |https://github.com/stuff-of-awe/awesome-dedukti[awesome-dedukti] |Starter
+|ACL2s |https://github.com/stuff-of-awe/awesome-acl2[awesome-acl2] |Starter
 |IsabelleZF |https://github.com/stuff-of-awe/awesome-isabelle[awesome-isabelle] |Starter
 |Naproche |`awesome-naproche` |Planned
 |Matita |`awesome-matita` |Planned
@@ -90,9 +120,9 @@ F# and F* are different languages; awesome-fsharp does not cover ECHIDNA's FStar
 |===
 |ECHIDNA variant |Collection destination |State
 |Vampire |https://github.com/stuff-of-awe/awesome-vampire[awesome-vampire] |Starter
-|EProver |`awesome-eprover` |Planned
-|SPASS |`awesome-spass` |Planned
-|Leo3 |`awesome-leo3` |Planned
+|EProver |https://github.com/stuff-of-awe/awesome-eprover[awesome-eprover] |Starter
+|SPASS |https://github.com/stuff-of-awe/awesome-automated-theorem-proving[awesome-automated-theorem-proving] |Family starter
+|Leo3 |https://github.com/stuff-of-awe/awesome-automated-theorem-proving[awesome-automated-theorem-proving] |Family starter
 |Satallax |`awesome-satallax` |Planned
 |Lash |`awesome-lash` |Planned
 |AgsyHOL |`awesome-agsyhol` |Planned
@@ -104,7 +134,7 @@ F# and F* are different languages; awesome-fsharp does not cover ECHIDNA's FStar
 |IleanCoP |`awesome-ileancop` |Planned
 |NanoCoP |`awesome-nanocop` |Planned
 |MetTeL2 |`awesome-mettel2` |Planned
-|Zipperposition |`awesome-zipperposition` |Planned
+|Zipperposition |https://github.com/stuff-of-awe/awesome-automated-theorem-proving[awesome-automated-theorem-proving] |Family starter
 |Prover9 |`awesome-prover9` |Planned
 |===
 
@@ -118,9 +148,9 @@ F# and F* are different languages; awesome-fsharp does not cover ECHIDNA's FStar
 |AltErgo |`awesome-altergo` |Planned
 |Qepcad |`awesome-qepcad` |Planned
 |Redlog |`awesome-redlog` |Planned
-|CaDiCaL |`awesome-cadical` |Planned
-|Kissat |`awesome-kissat` |Planned
-|MiniSat |`awesome-minisat` |Planned
+|CaDiCaL |https://github.com/stuff-of-awe/awesome-sat-solvers[awesome-sat-solvers] |Family starter
+|Kissat |https://github.com/stuff-of-awe/awesome-sat-solvers[awesome-sat-solvers] |Family starter
+|MiniSat |https://github.com/stuff-of-awe/awesome-sat-solvers[awesome-sat-solvers] |Family starter
 |DReal |`awesome-dreal` |Planned
 |OpenSmt |`awesome-opensmt` |Planned
 |SmtRat |`awesome-smt-rat` |Planned
@@ -132,8 +162,8 @@ F# and F* are different languages; awesome-fsharp does not cover ECHIDNA's FStar
 |===
 |ECHIDNA variant |Collection destination |State
 |FStar |https://github.com/stuff-of-awe/awesome-fstar[awesome-fstar] |Starter
-|Dafny |`awesome-dafny` |Planned
-|Why3 |`awesome-why3` |Planned
+|Dafny |https://github.com/stuff-of-awe/awesome-dafny[awesome-dafny] |Starter
+|Why3 |https://github.com/stuff-of-awe/awesome-why3[awesome-why3] |Starter
 |GNATprove |`awesome-gnatprove` |Planned
 |Stainless |`awesome-stainless` |Planned
 |LiquidHaskell |`awesome-liquidhaskell` |Planned
@@ -163,17 +193,17 @@ F# and F* are different languages; awesome-fsharp does not cover ECHIDNA's FStar
 |ELK |`awesome-elk` |Planned
 |Konclude |`awesome-konclude` |Planned
 |Storm |`awesome-storm` |Planned
-|ProB |`awesome-prob` |Planned
-|EasyCrypt |`awesome-easycrypt` |Planned
-|CryptoVerif |`awesome-cryptoverif` |Planned
-|SPIN |`awesome-spin` |Planned
+|ProB |https://github.com/stuff-of-awe/awesome-model-checking[awesome-model-checking] |Family starter
+|EasyCrypt |https://github.com/stuff-of-awe/awesome-protocol-verification[awesome-protocol-verification] |Family starter
+|CryptoVerif |https://github.com/stuff-of-awe/awesome-protocol-verification[awesome-protocol-verification] |Family starter
+|SPIN |https://github.com/stuff-of-awe/awesome-model-checking[awesome-model-checking] |Family starter
 |NuSMV |`awesome-nusmv` |Planned
-|TLC |`awesome-tlc` |Planned
-|Alloy |`awesome-alloy` |Planned
-|Prism |`awesome-prism` |Planned
-|UPPAAL |`awesome-uppaal` |Planned
-|Tamarin |`awesome-tamarin` |Planned
-|ProVerif |`awesome-proverif` |Planned
+|TLC |https://github.com/stuff-of-awe/awesome-model-checking[awesome-model-checking] |Family starter
+|Alloy |https://github.com/stuff-of-awe/awesome-model-checking[awesome-model-checking] |Family starter
+|Prism |https://github.com/stuff-of-awe/awesome-model-checking[awesome-model-checking] |Family starter
+|UPPAAL |https://github.com/stuff-of-awe/awesome-model-checking[awesome-model-checking] |Family starter
+|Tamarin |https://github.com/stuff-of-awe/awesome-protocol-verification[awesome-protocol-verification] |Family starter
+|ProVerif |https://github.com/stuff-of-awe/awesome-protocol-verification[awesome-protocol-verification] |Family starter
 |ABC |`awesome-abc` |Planned
 |Nitpick |https://github.com/stuff-of-awe/awesome-isabelle[awesome-isabelle] |Starter
 |Nunchaku |`awesome-nunchaku` |Planned
@@ -185,11 +215,11 @@ F# and F* are different languages; awesome-fsharp does not cover ECHIDNA's FStar
 [cols="1,2,1",options="header"]
 |===
 |ECHIDNA variant |Collection destination |State
-|GLPK |`awesome-glpk` |Planned
-|SCIP |`awesome-scip` |Planned
-|MiniZinc |`awesome-minizinc` |Planned
+|GLPK |https://github.com/stuff-of-awe/awesome-constraint-solving[awesome-constraint-solving] |Family starter
+|SCIP |https://github.com/stuff-of-awe/awesome-constraint-solving[awesome-constraint-solving] |Family starter
+|MiniZinc |https://github.com/stuff-of-awe/awesome-constraint-solving[awesome-constraint-solving] |Family starter
 |Chuffed |`awesome-chuffed` |Planned
-|ORTools |`awesome-or-tools` |Planned
+|ORTools |https://github.com/stuff-of-awe/awesome-constraint-solving[awesome-constraint-solving] |Family starter
 |===
 
 === Internal dispatch family
