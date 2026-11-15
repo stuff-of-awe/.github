@@ -2,7 +2,7 @@
 // Copyright (c) Jonathan D.A. Jewell <j.d.a.jewell@open.ac.uk>
 // SPDX-FileCopyrightText: 2026 Jonathan D.A. Jewell (stuff-of-awe) <j.d.a.jewell@open.ac.uk>
 = Contributing — Stuff of Awe organisation profile
-:revdate: 2026-MM-DD
+:revdate: 2026-11-15
 
 == Audience
 
@@ -64,10 +64,19 @@ just lint        # static checks
   `<initials>/<topic>` (for humans).
 . Make focused, narrow commits — one logical change per commit.
 . Open a PR against `main`.
-. **Enable auto-merge immediately** on every PR you open
-  (`gh pr merge <num> --auto --squash`) — estate standing policy
-  (see standards#196 audit and policies).
-. CI must be green. The PR auto-merges when checks pass + reviews land.
+. Open a *draft* PR while the change is under review. Do *not*
+  enable auto-merge merely because a PR exists; the old blanket instruction
+  referring to standards#196 is superseded for this organisation by the
+  evidence-first merge rule and the 2026-11-15 incident containment.
+. Obtain a substantive independent review (including configured review apps).
+  Address every actionable finding and resolve the review conversations.
+. Verify that *all required checks actually ran and passed on the latest
+  commit*, including governance, dogfooding, proof/test suites and security.
+  A skipped, missing, stale, zero-job or merely pending check is not a pass.
+. Only an authorised maintainer may approve a final merge after all required
+  conditions hold. Never bypass branch protections or force a merge.
+. If an independent reviewer or the required checks are unavailable, keep
+  the PR open/draft, log the blocker, and do not claim completion.
 
 == Adding a new dependency
 
