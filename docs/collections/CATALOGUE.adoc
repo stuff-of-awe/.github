@@ -4,6 +4,10 @@
 
 Reviewed 2026-11-07.
 
+== Follow-up audit (2026-11-15)
+
+The link:CROSS-ESTATE-GAPS-2026-11-15.adoc[cross-estate reconnaissance and checker inventory] reconciles the existing 141-variant ledger with targeted source evidence from Hyperpolymath, Metadatastician and Catachresis Colloquium. It also distinguishes verified proof machines, independent checkers, certificate formats and proof-exchange systems. The follow-up is a partial audit; it does not change this ledger's 2026-11-07 review date or promote any Planned repository to Existing.
+
 == Purpose and evidence
 
 Stuff of Awe is building maintained, practical collections for the mathematics,
