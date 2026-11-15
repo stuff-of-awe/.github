@@ -79,9 +79,15 @@ How this is implemented:
 
 * `dependabot.yml` watches the Dependabot-supported ecosystems the estate
   actually uses: `github-actions`, `cargo`, `mix` (Elixir), `docker`.
-* `dependabot-automerge.yml` auto-merges *every* bump (patch/minor/major,
-  security or routine) **once the required checks are green** — a broken bump
-  fails CI and stays open (you get an email); it never lands on a red `main`.
+* `dependabot-automerge.yml` only *offers* auto-merge for a PR
+  whose immutable author ID and login match Dependabot, whose semver update is
+  patch or minor, and (for security updates) whose advisory is independently
+  established as low or medium severity; unknown/high/critical advisories
+  fail closed. This is not an unconditional merge policy or proof of green CI.
+* During the 2026-11-15 Stuff of Awe merge-control incident, repository
+  auto-merge is disabled where possible and default-branch review/check
+  rulesets block premature merging. This containment remains in force
+  until a verified review and release process is restored.
 
 Caveat:
 
@@ -92,7 +98,7 @@ Caveat:
   currency is managed via `.json`/`.lock`, not Dependabot.
 * Do **not** add Dependabot as a ruleset *bypass* actor: that lets bumps skip
   the required checks (secret-scanning, SAST), removing the safety gate and the
-  "it broke" signal. Auto-merge-on-green gives fast merges without it.
+  "it broke" signal. Independent review, required checks and repository branch rules apply to any future optional auto-merge.
 
 == Julia Registry Packages — Standalone Repo Requirement
 
