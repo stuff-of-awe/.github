@@ -1,0 +1,153 @@
+// SPDX-License-Identifier: CC-BY-SA-4.0
+= Cross-estate prover, solver and proof-checker coverage: 2026-11-15
+:toc:
+
+*Status*: targeted reconnaissance and release plan, *not* a claim of exhaustive
+source-file inspection, available installations, live backend testing, or
+released collections. No new repositories were created by this audit.
+
+== Baseline and counting rules
+
+* https://github.com/hyperpolymath/echidna/blob/main/crates/echidna-core/src/prover_kind.rs[ECHIDNA ProverKind]
+  declares *141* variants; link to
+  https://github.com/hyperpolymath/echidna/blob/main/docs/PROVER_COUNT.adoc[its canonical count]
+  for the distinction between variants, implementation files and executed proof checks.
+* The previous link:CATALOGUE.adoc[collection ledger] classifies those variants:
+  *41* estate type-discipline dispatch categories, and *100* non-internal
+  entries. Of the 100, *11* are marked Existing, *9* Starter, and *80*
+  Planned. Counts are *variant rows*, not independent tools or repository counts.
+* Stuff of Awe had *25* repositories at inspection, including its `.github`
+  metadata repository. Related variants share collections (Lean 3/4, Coq/Rocq,
+  Isabelle/ZF, Cubical Agda, ACL2/ACL2s), and a collection may cover tools
+  without giving every tool its own repository.
+* GitHub repository search returned 403 in `hyperpolymath`, 47 in
+  `metadatastician`, and 34 in `catachresis-colloquium` during this audit.
+  These are *repositories*, not counts of proof-using projects. Code searches
+  sampled explicit tool references; this is not an audit of every default
+  branch or every private/offline dependency.
+
+== Concrete cross-estate consumers and interfaces
+
+These links support use of the *named source integration or proof artifact*,
+not successful invocation in current CI or soundness of the result.
+
+[cols="1,2,2",options="header"]
+|===
+|Organisation |Evidence |Collection coverage / gap
+
+|Hyperpolymath
+|https://github.com/hyperpolymath/echidna/blob/main/src/rust/provers/acl2.rs[ACL2 backend];
+ https://github.com/hyperpolymath/echidna/blob/main/src/rust/provers/dedukti.rs[Dedukti backend];
+ https://github.com/hyperpolymath/echidna/blob/main/src/rust/provers/gnatprove.rs[GNATprove backend]
+|ACL2, Dedukti and GNATprove currently have planned dedicated collections;
+ see the existing general-purpose provable-code collection for related tools.
+
+|Hyperpolymath
+|https://github.com/hyperpolymath/proven-cicd-and-workflows/blob/main/actions/creusot-check/check.sh[Creusot check action];
+ https://github.com/hyperpolymath/proven-cicd-and-workflows/blob/main/actions/verus-check/check.sh[Verus check action];
+ https://github.com/hyperpolymath/echidna/blob/main/.machine_readable/verification-integrations.a2ml[ECHIDNA verification roles]
+|Creusot and Verus are already described in
+ https://github.com/stuff-of-awe/awesome-provable[awesome-provable].
+ ECHIDNA explicitly classifies Creusot as partial non-backend and Verus as
+ not integrated at its 2026-11-07 review.
+
+|Metadatastician
+|https://github.com/metadatastician/vordr/blob/main/docs/SPARK-VERIFICATION.md[SPARK verification];
+ https://github.com/metadatastician/MetaManifold-Evidence/blob/main/lean/All.lean[Lean proof surface];
+ https://github.com/metadatastician/paint-type/blob/main/verification/proofs/lean4/ApiTypes.lean[Lean 4 proof files]
+|Lean already has its own starter; GNATprove/SPARK is documented in
+ awesome-provable but its dedicated collection remains planned.
+
+|Catachresis Colloquium
+|https://github.com/catachresis-colloquium/enaction-engine/blob/main/verification/proofs/agda/Properties.agda[Agda proof source];
+ https://github.com/catachresis-colloquium/proof-of-work/blob/main/src/verification/z3_integration.rs[Z3 integration];
+ https://github.com/catachresis-colloquium/universal-modding-studio/blob/main/spark/README.adoc[SPARK evidence]
+|Agda and Z3 have collections; SPARK/GNATprove is partly covered by
+ awesome-provable.
+|===
+
+== Additional, underrepresented assurance layer
+
+Meta-theory, independent proof checking, certificate checking and verified
+proof-machine execution were not explicitly assigned a family in the
+141-variant ledger. They are *not all synonyms* for automated proving:
+
+* https://github.com/MetaRocq/metarocq[MetaRocq] — Rocq metatheory,
+  verified type checking and erasure.
+* https://github.com/digama0/lean4lean[Lean4Lean] — alternative Lean 4
+  kernel implementation and ongoing metatheory; original-kernel derivation
+  limits claims of implementation independence.
+* https://github.com/ammkrn/nanoda_lib[nanoda] — Rust-based independent
+  checking of Lean declarations; not a formally proved checker merely by
+  being independent.
+* https://cakeml.org/candle/[Candle] — machine-code-level verified HOL
+  prover according to the project; specifically a stronger claim than an
+  ordinary kernel replay.
+* https://github.com/smtcoq/smtcoq[SMTCoq] and
+  https://github.com/ufmg-smite/carcara[Carcara] — certified witnesses in
+  the former's supported scope versus an independent Alethe-format checker
+  in the latter; do not conflate these.
+* https://www.cakeml.org/checkers.html[CakeML proof checkers], including
+  https://github.com/tanyongkiam/cake_lpr[cake_lpr], and
+  https://satcompetition.github.io/2026/output.html[SAT Competition 2026]
+  checks (GRAT, VeriPB/CakePB) — proof-certificate validation paths with
+  explicit input formats and verification boundaries.
+* https://github.com/Deducteam/Dedukti[Dedukti] and
+  https://github.com/Deducteam/lambdapi[Lambdapi] — logical frameworks
+  and proof exchange. A checked translated proof does not automatically
+  validate the translation of its original meaning.
+
+The `awesome-provable` draft
+https://github.com/stuff-of-awe/awesome-provable/pull/18[PR #18]
+is a first curated resource for these systems; it is *not merged*
+as of this audit, and not a separately created awesome repository.
+
+== Recommended release groups
+
+* *P0 — strengthen current coverage*: repair and enrich existing
+  Agda, Coq/Rocq, Idris2, provable-code, Lean, Isabelle, Z3 and cvc5
+  lists; demand canonical references, useful tutorials, and licence provenance.
+* *P1 — high-value dedicated starters*: `awesome-acl2`,
+  `awesome-dafny`, `awesome-why3`, `awesome-eprover`,
+  `awesome-dedukti`, and a proof-certificate/checker family collection
+  tentatively `awesome-proof-checking`. These serve estate use or clear
+  interoperability/assurance needs.
+* *P1 — related-family collections*: `awesome-automated-theorem-proving`,
+  `awesome-sat-solvers`, `awesome-model-checking`,
+  `awesome-protocol-verification`, and `awesome-constraint-solving`.
+  Use family-level repositories where individual tools cannot support
+  four useful introductory sections without padding.
+* *P2 — specialist collections*: follow the 80 existing Planned rows
+  in link:CATALOGUE.adoc[the ledger], prioritising public research use,
+  maintainer availability and original examples, not repo proliferation.
+* *Internal*: the 41 declared estate type disciplines belong in a
+  shared type-systems reference until there is a real independent public
+  implementation to document; avoid 41 empty "awesome" repos.
+
+Before releasing a repo, document the upstream awesome-list survey, project
+home, canonical docs, tutorial, reference, worked example, community channel,
+licence, curator, review date and maintenance caveats. A name alone is not
+completion.
+
+== Trust and operational gates
+
+An ECHIDNA `ProverKind` declaration or a source adapter only demonstrates
+source-level coverage. In particular,
+https://github.com/hyperpolymath/echidna/blob/main/meta-checker/README.adoc[the
+ECHIDNA meta-checker] explicitly distinguishes proof of its Agda model from
+proof that the Rust pipeline implements that model. Do not use this index to
+upgrade such claims.
+
+Promote a proposed collection to Existing only once its repository, original
+content, attribution, and review evidence are actually present. Treat merging
+as complete only once the latest-commit checks are green and relevant review
+threads are addressed and resolved. Never automatically merge or waive gates.
+
+== Follow-up audit depth
+
+This audit should be extended by a reproducible search over all repository
+manifests, CI configurations, proof-source extensions and binary-invocation
+sites, with paths and commit SHAs for each positive match. Separately audit
+binary availability, parser support, proof-certificate portability and
+trusted computing bases. Absence from a keyword code-search result is not
+evidence of absence in the estate.
