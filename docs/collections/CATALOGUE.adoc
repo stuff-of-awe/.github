@@ -8,6 +8,10 @@ Baseline reviewed 2026-11-07; new collection mapping reviewed 2026-11-15.
 
 The link:CROSS-ESTATE-GAPS-2026-11-15.adoc[cross-estate reconnaissance and checker inventory] reconciles the existing 141-variant ledger with targeted source evidence from Hyperpolymath, Metadatastician and Catachresis Colloquium. It also distinguishes verified proof machines, independent checkers, certificate formats and proof-exchange systems. The follow-up is a partial audit; it does not change this ledger's 2026-11-07 review date or promote any Planned repository to Existing.
 
+See link:ESTATE-SOURCE-SAMPLE-2026-11-15.adoc[bounded cross-estate code evidence]
+for source-backed examples and places where a declared adapter is not a
+functioning prover interface.
+
 == New collections created 2026-11-15
 
 Eleven public starter repositories now have independently written annotated
