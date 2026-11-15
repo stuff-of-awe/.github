@@ -57,9 +57,26 @@ jobs:
       - name: Check for large files
         run: |
           find . -type f -size +1M -not -path "./.git/*" | head -10 || echo "No large files"
-      - name: EditorConfig check
-        uses: editorconfig-checker/action-editorconfig-checker@51f63319f592f97930c73d9c46184d20bd206393 # v3.0.0
+      - name: EditorConfig check (digest-verified upstream release)
+        # Advisory status preserved; no disallowed third-party GitHub Action.
         continue-on-error: true
+        shell: bash
+        run: |
+          set -euo pipefail
+          archive="$RUNNER_TEMP/editorconfig-checker.tar.gz"
+          curl -fsSL --retry 3 --max-time 60 \
+            "https://github.com/editorconfig-checker/editorconfig-checker/releases/download/v4.0.1/editorconfig-checker-linux-amd64.tar.gz" \
+            -o "$archive"
+          echo "90139c6ed52373c0acfc9deb2a07aa812e5184753afd4bc8252bf44eb4909155  $archive" | sha256sum -c -
+          mkdir -p "$RUNNER_TEMP/editorconfig-checker"
+          tar -xzf "$archive" -C "$RUNNER_TEMP/editorconfig-checker"
+          checker="$(find "$RUNNER_TEMP/editorconfig-checker" -type f -name editorconfig-checker -print -quit)"
+          if [ -z "$checker" ]; then
+            echo "::error::verified archive lacks editorconfig-checker executable"
+            exit 1
+          fi
+          chmod +x "$checker"
+          "$checker"
   docs:
     runs-on: ubuntu-24.04
     timeout-minutes: 15
