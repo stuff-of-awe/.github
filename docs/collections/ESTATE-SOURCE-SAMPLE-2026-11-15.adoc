@@ -1,0 +1,97 @@
+// SPDX-License-Identifier: CC-BY-SA-4.0
+= Cross-estate prover evidence: bounded source sample
+:revdate: 2026-11-15
+
+This is an *aspect-oriented source inspection*, not an executed CI/proof
+report and not a complete enumeration of the estate. Search sampled four
+external-prover names across selected default-branch files in the
+`hyperpolymath`, `metadatastician`, and `catachresis-colloquium` organisations;
+each GitHub search was capped at *20 hits*. Searches can omit repositories,
+nondefault branches, generated artefacts and unindexed data. For exhaustive
+sampling criteria see https://github.com/stuff-of-awe/.github/issues/18[issue #18].
+
+== Declaration baseline
+
+The live `hyperpolymath/echidna`
+https://github.com/hyperpolymath/echidna/blob/478b7519c559b55b610a31df3b4813833f0e2bd9/crates/echidna-core/src/prover_kind.rs[`ProverKind` source]
+was re-read: *141* unique enum variants, of which *100* have external
+collection destinations in this catalogue and *41* represent internal
+type-checker/dispatch categories. These counts are declaration inventory,
+not evidence of 141 installed and executable backend binaries.
+
+== Sampled proof surfaces and important counterexamples
+
+[cols="1,1,2",options="header"]
+|===
+|Estate |Source evidence |What can and cannot be concluded
+
+|Hyperpolymath / ECHIDNA
+|https://github.com/hyperpolymath/echidna/blob/478b7519c559b55b610a31df3b4813833f0e2bd9/src/rust/provers/gnatprove.rs[GNATprove adapter]
+|Adapter code exists. No fresh executable invocation, GNATprove proof log,
+ certificate replay or validated external toolchain was produced here.
+
+|Hyperpolymath / proven-cicd-and-workflows
+|https://github.com/hyperpolymath/proven-cicd-and-workflows/blob/5b6024c0ce6ea4a97ea6f4c87b1f4e34267d69a6/actions/creusot-check/check.sh[Creusot gate source]
+|A specified gate with distinct detection, anti-theatre and proof phases.
+ The presence of gate code does *not* itself show that a particular project
+ executed it or discharged any obligations.
+
+|Hyperpolymath / Axiom.jl
+|https://github.com/hyperpolymath/Axiom.jl/blob/15073e8d6ee12df3124f11a2e86a62ccdda96c34/scripts/creusot-evidence.sh[Creusot evidence generator]
+|Source inventories contracts, build hashes, Cargo checks and tests;
+ examine the output and proof phase before accepting a Creusot verification
+ claim. A script comment describing executable evidence is not a receipt.
+
+|Metadatastician / MetaManifold-Evidence
+|https://github.com/metadatastician/MetaManifold-Evidence/blob/e135aec2390fea81a4f8c0a1b1084230c60b2076/scripts/check-lean.sh[Lean recheck script]
+|Describes pinned Lean, generated-table byte comparison, axiom/escape-hatch
+ audit and negative-test requirements. `lean/All.lean` is present in this
+ repository's source tree. These are *checkable proposed gates*, not freshly
+ confirmed passing outputs.
+
+|Metadatastician / hvn-dehallucinator
+|https://github.com/metadatastician/hvn-dehallucinator/blob/da01ab82aa6b1974276e6f7f064c2beed2f356b4/verification/proofs/lean4/Haruspex.lean[Haruspex Lean proofs]
+|Actual Lean theorem source exists and documents an Agda re-proof route.
+ A file header's "Checked with Lean" is a claim to verify against the
+ exact commit, toolchain, command, exit code and permitted axioms.
+
+|Metadatastician / vordr
+|https://github.com/metadatastician/vordr/blob/017616c5e31db41c9bd667d2aa35298cab8b81ab/docs/SPARK-VERIFICATION.md[SPARK design documentation]
+|Specs-only, uncompiled and C-stub-backed at runtime per upstream
+ documentation; no executable GNATprove consumer/proof result can be inferred.
+
+|Catachresis Colloquium / universal-modding-studio
+|https://github.com/catachresis-colloquium/universal-modding-studio/blob/7cf50bedf037025b6b38f870711a01b8b4a48deb/scripts/proof-check-spark.sh[fail-closed SPARK checker script]
+|The script requires GNATprove, present SPARK sources, proved conditions
+ and no unproved/assumed checks; it is architecturally stronger than a
+ "prover missing → success" gate. A passing run was *not observed* here.
+
+|Catachresis Colloquium / proof-of-work
+|https://github.com/catachresis-colloquium/proof-of-work/blob/6335ebb98805152661f79b22072397b59860454f/src/verification/z3_integration.rs[Z3 integration source]
+|The showcased `verify_formula(_level)` does not read the supplied level:
+ it constructs fixed P/Q/R formulas; `validate_proof_locally(_formula)`
+ does not parse its supplied formula. *These are placeholder interfaces*,
+ not real verification of level solutions or arbitrary proof inputs. The
+ source itself flags an owed soundness obligation; do not cite it as a
+ completed proof backend.
+
+|===
+
+== Assurance ladder for counting coverage
+
+. *Declared*: a configuration, enum or named tool reference exists.
+. *Implemented source*: an adapter/proof/gate function exists in the tree.
+. *Execution witnessed*: pinned toolchain invocation with actual input,
+  receipt and zero skipped obligations.
+. *Certificate independently checked*: the produced witness was replayed
+  under documented logic and checker.
+. *Checker implementation verified*: an explicit mechanised checker-soundness
+  theorem applies to the actual implementation, trusted base and format.
+. *End-to-end verified executable*: a theorem connects the produced executable
+  behaviour with the claimed property; a verified compiler alone is insufficient.
+
+The presence of a curated awesome-list entry establishes only navigation
+coverage. It cannot upgrade any item's assurance level. Prioritise
+https://github.com/stuff-of-awe/.github/issues/17[PR governance incident]
+and https://github.com/stuff-of-awe/.github/issues/16[canon release issue]
+before closing correctness claims.
