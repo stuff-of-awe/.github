@@ -3,8 +3,9 @@
 :revdate: 2026-11-15
 
 This is an *aspect-oriented source inspection*, not an executed CI/proof
-report and not a complete enumeration of the estate. Search sampled four
-external-prover names across selected default-branch files in the
+report and not a complete enumeration of the estate. Eight capped code
+search queries (GNATprove, Creusot, Verus, Aeneas, Lean 4, Z3, SPARK)
+were issued across selected default-branch files in the
 `hyperpolymath`, `metadatastician`, and `catachresis-colloquium` organisations;
 each GitHub search was capped at *20 hits*. Searches can omit repositories,
 nondefault branches, generated artefacts and unindexed data. For exhaustive
