@@ -52,11 +52,13 @@ not successful invocation in current CI or soundness of the result.
  not integrated at its 2026-11-07 review.
 
 |Metadatastician
-|https://github.com/metadatastician/vordr/blob/main/docs/SPARK-VERIFICATION.md[SPARK verification];
- https://github.com/metadatastician/MetaManifold-Evidence/blob/main/lean/All.lean[Lean proof surface];
- https://github.com/metadatastician/paint-type/blob/main/verification/proofs/lean4/ApiTypes.lean[Lean 4 proof files]
-|Lean already has its own starter; GNATprove/SPARK is documented in
- awesome-provable but its dedicated collection remains planned.
+|https://github.com/metadatastician/MetaManifold-Evidence/blob/main/lean/All.lean[Lean proof source];
+ https://github.com/metadatastician/paint-type/blob/main/verification/proofs/lean4/ApiTypes.lean[Lean 4 proof source];
+ https://github.com/metadatastician/vordr/blob/main/docs/SPARK-VERIFICATION.md[planned SPARK interface]
+|Lean already has its own starter. Vörðr's SPARK material is
+ *specifications-only, uncompiled and using C stubs at runtime*;
+ it is a proposed consumer/interface, not evidence of an executed proof.
+ GNATprove/SPARK remains partly documented in awesome-provable.
 
 |Catachresis Colloquium
 |https://github.com/catachresis-colloquium/enaction-engine/blob/main/verification/proofs/agda/Properties.agda[Agda proof source];
@@ -84,9 +86,10 @@ proof-machine execution were not explicitly assigned a family in the
   prover according to the project; specifically a stronger claim than an
   ordinary kernel replay.
 * https://github.com/smtcoq/smtcoq[SMTCoq] and
-  https://github.com/ufmg-smite/carcara[Carcara] — certified witnesses in
-  the former's supported scope versus an independent Alethe-format checker
-  in the latter; do not conflate these.
+  https://github.com/ufmg-smite/carcara[Carcara] — SMTCoq provides
+  *certified checkers* for supported external proof witnesses, whereas Carcara
+  is an independent Alethe-format checker not claimed to be formally verified;
+  neither a certificate nor a proof-format label is automatically certified.
 * https://www.cakeml.org/checkers.html[CakeML proof checkers], including
   https://github.com/tanyongkiam/cake_lpr[cake_lpr], and
   https://satcompetition.github.io/2026/output.html[SAT Competition 2026]
@@ -97,10 +100,11 @@ proof-machine execution were not explicitly assigned a family in the
   and proof exchange. A checked translated proof does not automatically
   validate the translation of its original meaning.
 
-The `awesome-provable` draft
-https://github.com/stuff-of-awe/awesome-provable/pull/18[PR #18]
-is a first curated resource for these systems; it is *not merged*
-as of this audit, and not a separately created awesome repository.
+The https://github.com/stuff-of-awe/awesome-provable/pull/18[awesome-provable
+PR #18] was *merged prematurely on 2026-11-15* before all review findings
+and latest-commit assurances were resolved. Its checker index exists, but
+merging does not certify its conclusions, and a separate dedicated collection
+has not yet been created.
 
 == Recommended release groups
 
